@@ -1,5 +1,5 @@
-resource "azurerm_storage_account_network_rules" "storage_account_network_ruless" {
-  for_each = var.storage_account_network_ruless
+resource "azurerm_storage_account_network_rules" "storage_account_network_ruleses" {
+  for_each = var.storage_account_network_ruleses
 
   default_action             = each.value.default_action
   storage_account_id         = each.value.storage_account_id

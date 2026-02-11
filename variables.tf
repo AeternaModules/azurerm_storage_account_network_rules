@@ -1,6 +1,6 @@
-variable "storage_account_network_ruless" {
+variable "storage_account_network_ruleses" {
   description = <<EOT
-Map of storage_account_network_ruless, attributes below
+Map of storage_account_network_ruleses, attributes below
 Required:
     - default_action
     - storage_account_id
