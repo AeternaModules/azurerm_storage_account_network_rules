@@ -8,7 +8,7 @@ resource "azurerm_storage_account_network_rules" "storage_account_network_rulese
   virtual_network_subnet_ids = each.value.virtual_network_subnet_ids
 
   dynamic "private_link_access" {
-    for_each = each.value.private_link_access != null ? [each.value.private_link_access] : []
+    for_each = each.value.private_link_access != null ? each.value.private_link_access : []
     content {
       endpoint_resource_id = private_link_access.value.endpoint_resource_id
       endpoint_tenant_id   = private_link_access.value.endpoint_tenant_id
