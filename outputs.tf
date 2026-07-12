@@ -1,3 +1,7 @@
+output "storage_account_network_ruleses_id" {
+  description = "Map of id values across all storage_account_network_ruleses, keyed the same as var.storage_account_network_ruleses"
+  value       = { for k, v in azurerm_storage_account_network_rules.storage_account_network_ruleses : k => v.id }
+}
 output "storage_account_network_ruleses_bypass" {
   description = "Map of bypass values across all storage_account_network_ruleses, keyed the same as var.storage_account_network_ruleses"
   value       = { for k, v in azurerm_storage_account_network_rules.storage_account_network_ruleses : k => v.bypass }
